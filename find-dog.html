@@ -22,7 +22,6 @@
               <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
                 <button class="menu-icon dark" type="button" data-toggle></button>
               </span>
-                <!-- Active Link -->
                 <a href="index.html">Fur Me</a>
             </div>
             <div id="responsive-menu">
@@ -30,7 +29,8 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                   <li><a href="prepare.html">Are you Ready?</a></li>
                   <li><a href="breeds.html">Dog Breeds</a></li>
-                  <li><a href="find-dog.html">Find a Dog</a></li>
+                  <!-- Active Link -->
+                  <li class="active"><a href="find-dog.html">Find a Dog</a></li>
                 </ul>
               </div>
             </div>
@@ -40,15 +40,41 @@
       </div>
     </nav>
 
+
     <!-- Page Content -->
 
     <div class="row">
       <div class="large-12 columns">
-        <h1>Welcome to Fur Me</h1>
+        <h1>Find a Dog!</h1>
       </div>
     </div>
 
-    <p id="breed"></p>
+
+    <div class="row">
+      <div class="small-12 columns">
+          <!-- Side Bar -->
+          <div class="small-2 hide-for-small-only columns">
+            <ul>
+              <li><a href="#">Where to Start</a></li>
+              <li><a href="#">Adoption</a></li>
+              <li><a href="#">Breeders</a></li>
+            </ul>
+          </div>
+          <!-- Where to Start -->
+          <div class="medium-10 small-12 columns">
+            <h2>Where to Start</h2>
+          </div>
+          <!-- Adoption -->
+          <div class="medium-10 small-12 columns">
+            <h2>Adoption</h2>
+          </div>
+          <!-- Buying -->
+          <div class="medium-10 small-12 columns">
+            <h2>Buying a Dog</h2>
+          </div>
+      </div>
+    </div>
+
 
 
     <script src="assets/js/vendor/jquery.js"></script>
