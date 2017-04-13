@@ -55,11 +55,40 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bassetHound: {
     breed: "Basset Hound",
+    description: "Great Dog!",
+    characteristics: null,
+    type: null,
+    size: null,
+    rarity: false,
+    hypoallergenic: null,
+    friendliness: null,
+    friendliness_with_family: null,
+    good_with_children: null,
+    friendliness_with_strangers: null,
+    friendliness_with_dogs: null,
+    lifestyle: null,
+    energy: null,
+    apartment_adaptability: null,
+    independence: null,
+    grooming: null,
+    trainability: null,
+    intelligence: null,
+    noisiness: null,
+    prey_drive: null,
+    wanderlust: null,
+    health_issues: null,
+    female_weight: null,
+    male_weight: null,
+    coat_length: null,
+    lifespan: null
+  },
+  beagle: {
+    breed: "Beagle",
     description: null,
     characteristics: null,
     type: null,
@@ -84,36 +113,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
-    lifespan: null
-  },
-  beagle: {
-    breed: null,
-    description: "Beagle",
-    characteristics: null,
-    type: null,
-    size: null,
-    rarity: false,
-    hypoallergenic: null,
-    friendliness: null,
-    friendliness_with_family: null,
-    good_with_children: null,
-    friendliness_with_strangers: null,
-    friendliness_with_dogs: null,
-    lifestyle: null,
-    energy: null,
-    apartment_adaptability: null,
-    independence: null,
-    grooming: null,
-    trainability: null,
-    intelligence: null,
-    noisiness: null,
-    prey_drive: null,
-    wanderlust: null,
-    health_issues: null,
-    female_weight: null,
-    male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   berneseMountainDog: {
@@ -142,7 +142,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bichonsFrise: {
@@ -171,7 +171,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bloodhound: {
@@ -200,7 +200,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   borderCollie: {
@@ -229,7 +229,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bostonTerrier: {
@@ -258,7 +258,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   boxer: {
@@ -287,7 +287,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   brittany: {
@@ -316,7 +316,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bulldog: {
@@ -345,7 +345,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   bullmastiff: {
@@ -374,7 +374,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   caneCorso: {
@@ -403,7 +403,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   cavalierKingCharlesSpaniel: {
@@ -432,7 +432,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   chesapeakeBayRetriever: {
@@ -461,7 +461,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   chihuahua: {
@@ -490,7 +490,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   cockerSpaniel: {
@@ -519,7 +519,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   collie: {
@@ -548,7 +548,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   dachshund: {
@@ -577,7 +577,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   dobermanPinscher: {
@@ -606,7 +606,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   englishSpringerSpaniel: {
@@ -635,7 +635,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   frenchBulldog: {
@@ -664,7 +664,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   germanShepherd: {
@@ -693,7 +693,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   germanShorthairedPointer: {
@@ -722,17 +722,17 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   goldenRetriever: {
     breed: "Golden Retriever",
     description: null,
-    characteristics: null,
-    type: null,
-    size: null,
+    characteristics: "Loyal, Caring, Friendly, Devoted",
+    type: "Sporting",
+    size: "Medium",
     rarity: false,
-    hypoallergenic: null,
+    hypoallergenic: false,
     friendliness: null,
     friendliness_with_family: null,
     good_with_children: null,
@@ -751,7 +751,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   greatDane: {
@@ -780,10 +780,10 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
-  Havanese: {
+  havanese: {
     breed: "Havanese",
     description: null,
     characteristics: null,
@@ -809,7 +809,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   labradorRetriever: {
@@ -838,7 +838,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   maltese: {
@@ -867,7 +867,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   mastiff: {
@@ -896,7 +896,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   miniatureSchnauzer: {
@@ -925,7 +925,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   newfoundland: {
@@ -954,7 +954,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   papillon: {
@@ -983,7 +983,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   pembrokeWelshCorgi: {
@@ -1012,7 +1012,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   pomeranian: {
@@ -1041,7 +1041,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   poodle: {
@@ -1070,7 +1070,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   pug: {
@@ -1099,7 +1099,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   rottweiler: {
@@ -1128,7 +1128,36 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
+    lifespan: null
+  },
+  shetlandSheepdog: {
+    breed: "Shetland Sheepdog",
+    description: null,
+    characteristics: null,
+    type: null,
+    size: null,
+    rarity: false,
+    hypoallergenic: null,
+    friendliness: null,
+    friendliness_with_family: null,
+    good_with_children: null,
+    friendliness_with_strangers: null,
+    friendliness_with_dogs: null,
+    lifestyle: null,
+    energy: null,
+    apartment_adaptability: null,
+    independence: null,
+    grooming: null,
+    trainability: null,
+    intelligence: null,
+    noisiness: null,
+    prey_drive: null,
+    wanderlust: null,
+    health_issues: null,
+    female_weight: null,
+    male_weight: null,
+    coat_length: null,
     lifespan: null
   },
   shibaInu: {
@@ -1157,7 +1186,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   shihTzu: {
@@ -1186,7 +1215,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   siberianHusky: {
@@ -1215,7 +1244,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   softCoatedWheatenTerrier: {
@@ -1244,7 +1273,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   saintBernard: {
@@ -1273,7 +1302,36 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
+    lifespan: null
+  },
+  vizsla: {
+    breed: "Vizsla",
+    description: null,
+    characteristics: null,
+    type: null,
+    size: null,
+    rarity: false,
+    hypoallergenic: null,
+    friendliness: null,
+    friendliness_with_family: null,
+    good_with_children: null,
+    friendliness_with_strangers: null,
+    friendliness_with_dogs: null,
+    lifestyle: null,
+    energy: null,
+    apartment_adaptability: null,
+    independence: null,
+    grooming: null,
+    trainability: null,
+    intelligence: null,
+    noisiness: null,
+    prey_drive: null,
+    wanderlust: null,
+    health_issues: null,
+    female_weight: null,
+    male_weight: null,
+    coat_length: null,
     lifespan: null
   },
   weimaraner: {
@@ -1302,7 +1360,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   westHighlandWhiteTerrier: {
@@ -1331,7 +1389,7 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   },
   yorkshireTerrier: {
@@ -1360,7 +1418,96 @@ var dogBreeds = {
     health_issues: null,
     female_weight: null,
     male_weight: null,
-    coat_weight: null,
+    coat_length: null,
     lifespan: null
   }
+}
+// breed list
+var breedList = "yorkshireTerrier";
+// Log breed name and description
+console.log(dogBreeds[breedList].breed + " " + dogBreeds[breedList].description);
+
+// pretend we clicked on yorkshireTerrier
+var breed = "goldenRetriever";
+// Log all information about the selected breed
+console.log(
+  "Breed Name:" + " " + dogBreeds[breed].breed + " " +
+  "Description:" + " " + dogBreeds[breed].description + " " +
+  "Characteristics:" + " " + dogBreeds[breed].characteristics + " " +
+  "Type:" + " " + dogBreeds[breed].type + " " +
+  "Size:" + " " + dogBreeds[breed].size + " " +
+  "Rarity:" + " " + dogBreeds[breed].rarity + " " +
+  "Hypoallergenic:" + " " + dogBreeds[breed].hypoallergenic + " " +
+  "Friendliness:" + " " + dogBreeds[breed].friendliness + " " +
+  "Friendliness With Family:" + " " + dogBreeds[breed].friendliness_with_family + " " +
+  "Good With Children:" + " " + dogBreeds[breed].good_with_children + " " +
+  "Friendliness With Strangers:" + " " + dogBreeds[breed].friendliness_with_strangers + " " +
+  "Friendliness With Dogs:" + " " + dogBreeds[breed].friendliness_with_dogs + " " +
+  "Lifestyle:" + " " + dogBreeds[breed].lifestyle + " " +
+  "Energy:" + " " + dogBreeds[breed].energy + " " +
+  "Apartment Adaptability:" + " " + dogBreeds[breed].apartment_adaptability + " " +
+  "Independence:" + " " + dogBreeds[breed].independence + " " +
+  "Grooming:" + " " + dogBreeds[breed].grooming + " " +
+  "Trainability :" + " " + dogBreeds[breed].trainability + " " +
+  "Intelligence:" + " " + dogBreeds[breed].intelligence + " " +
+  "Noisiness :" + " " + dogBreeds[breed].noisiness + " " +
+  "Prey Drive:" + " " + dogBreeds[breed].prey_drive + " " +
+  "Wanderlust:" + " " + dogBreeds[breed].wanderlust + " " +
+  "Health Issues:" + " " + dogBreeds[breed].health_issues + " " +
+  "Female Weight:" + " " + dogBreeds[breed].female_weight + " " +
+  "Male Weight:" + " " + dogBreeds[breed].male_weight + " " +
+  "Coat Length:" + " " + dogBreeds[breed].coat_length + " " +
+  "Lifespan:" + " " + dogBreeds[breed].lifespan
+);
+
+// log Without descriptors
+// console.log(
+//   dogBreeds[breed].breed + " "
+//   + dogBreeds[breed].description + " "
+//   + dogBreeds[breed].characteristics + " "
+//   + dogBreeds[breed].type + " "
+//   + dogBreeds[breed].size + " "
+//   + dogBreeds[breed].rarity + " "
+//   + dogBreeds[breed].hypoallergenic + " "
+//   + dogBreeds[breed].friendliness + " "
+//   + dogBreeds[breed].friendliness_with_family + " "
+//   + dogBreeds[breed].good_with_children + " "
+//   + dogBreeds[breed].friendliness_with_strangers + " "
+//   + dogBreeds[breed].friendliness_with_dogs + " "
+//   + dogBreeds[breed].lifestyle + " "
+//   + dogBreeds[breed].energy + " "
+//   + dogBreeds[breed].apartment_adaptability + " "
+//   + dogBreeds[breed].independence + " "
+//   + dogBreeds[breed].grooming + " "
+//   + dogBreeds[breed].trainability + " "
+//   + dogBreeds[breed].intelligence + " "
+//   + dogBreeds[breed].noisiness + " "
+//   + dogBreeds[breed].prey_drive + " "
+//   + dogBreeds[breed].wanderlust + " "
+//   + dogBreeds[breed].health_issues + " "
+//   + dogBreeds[breed].female_weight + " "
+//   + dogBreeds[breed].male_weight + " "
+//   + dogBreeds[breed].coat_length + " "
+//   + dogBreeds[breed].lifespan
+// );
+
+// Create an Array of Dog Breeds
+var dogBreedArray = []
+
+//add the properties(objects) in the DogBreeds Object into the Dog Breeds Array
+for (var property in dogBreeds) {
+  dogBreedArray.push(property);
+}
+
+// Sort the Array of dog breeds alphebetically
+// Sort a-z
+dogBreedArray.sort();
+// sort z-a
+// dogBreedArray.reverse();
+
+for (i = 0; i < dogBreedArray.length; i++) {
+  console.log(dogBreeds[dogBreedArray[i]].breed);
+  console.log(dogBreeds[dogBreedArray[i]].description);
+  // array[0]  // "camaro"
+  // object[camaro].model
 }
