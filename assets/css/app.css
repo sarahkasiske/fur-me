@@ -33,3 +33,31 @@ nav li a:hover {
   border-bottom-width: 1px;
   border-color: #efefef;
 }
+
+/*Text Styling */
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
+}
+/*Side Bar Menu*/
+ul {
+  list-style-type: none;
+}
+
+ul li a {
+  color: #FF8B61;
+}
+
+/*Row Styling*/
+
+.row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
