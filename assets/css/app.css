@@ -51,7 +51,7 @@ ul {
   list-style-type: none;
 }
 
-ul li a {
+ul.sidebar li a {
   color: #FF8B61;
 }
 
