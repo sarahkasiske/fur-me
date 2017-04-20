@@ -350,8 +350,8 @@ var dogBreeds = {
   },
   bullmastiff: {
     breed: "Bullmastiff",
-    description: "Historically, Bullmastiffs served as guardians of the grounds on England’s great estates. They were breed to be courageous, strong and fast.  Bullmastiffs today have become loving dogs who are protective of their family.",
-    characteristics: " Protective, loving, loyal",
+    description: "Historically, Bullmastiffs served as guardians of the grounds on England’s great estates. They were breed to be courageous, strong and fast. Bullmastiffs today have become loving dogs who are protective of their family.",
+    characteristics: "Protective, loving, loyal",
     type: "Working",
     size: "Large",
     rarity: false,
@@ -495,90 +495,90 @@ var dogBreeds = {
   },
   cockerSpaniel: {
     breed: "Cocker Spaniel",
-    description: null,
-    characteristics: null,
-    type: null,
-    size: null,
+    description: "While Cocker Spaniels are outstanding family dogs, they were originally known for their expertise as bird dogs.  Their sweet disposition and desire to please has made them popular with children, other pets and the elderly.  Unfortunately, the Cocker Spaniels popularity led to over breeding resulting in serious health and temperament problems, making it especially important to research and find a dedicated breeder.",
+    characteristics: "Friendly, lively, affectionate, active, enthusiastic",
+    type: "Sporting",
+    size: "Medium",
     rarity: false,
-    hypoallergenic: null,
-    friendliness: null,
-    friendliness_with_family: null,
-    good_with_children: null,
-    friendliness_with_strangers: null,
-    friendliness_with_dogs: null,
-    lifestyle: null,
-    energy: null,
-    apartment_adaptability: null,
-    independence: null,
-    grooming: null,
-    trainability: null,
-    intelligence: null,
-    noisiness: null,
-    prey_drive: null,
-    wanderlust: null,
-    common_health_issues: null,
-    weight: null,
-    height: null,
-    coat_length: null,
-    lifespan: null
+    hypoallergenic: false,
+    friendliness: "A well-breed Cocker Spaniel is a devoted family pet, loving and gentle, wanting nothing more than to be part of a happy family. Due to their popularity and over breeding,  there have been issues with temperament. It is important to socialize puppies early as they can become sensitive to strange people and dogs. This can make them nervous and your dog may pee because they are excited.",
+    friendliness_with_family: 5,
+    good_with_children: 3,
+    friendliness_with_strangers: 3,
+    friendliness_with_dogs: 4,
+    lifestyle: "Cocker Spaniels were bred to be hunting dogs so they may chase birds or small animals. If a fenced yard is not available it is best to keep your dog on a leash.  Cocker Spaniels are primarily companion dogs, but they can be trained for show ring, obedience and agility competitions, field work and are also excellent therapy dogs. Cocker Spaniels are happy in most environments.  In an apartment a brisk walk each day will keep them happy and exercised.",
+    energy: 4,
+    apartment_adaptability: 5,
+    independence: 1,
+    grooming: 5,
+    trainability: "Cocker Spaniels have a “soft” personality. To get the best training results gentle, consistent techniques are suggested. Dogs can become fearful with harsh commands. A command for “quiet” should be part of the training routine as Cockers can become barkers. Early socialization as well as careful and kind training will bring out the best in your dog.",
+    intelligence: 4,
+    noisiness: 3,
+    prey_drive: 5,
+    wanderlust: 4,
+    common_health_issues: "Eye disorders, disc disease, hypothyroidism, ear infection",
+    weight: "15-31 lbs",
+    height: "13-15 in",
+    coat_length: "Long",
+    lifespan: "12-15 Years"
   },
   collie: {
     breed: "Collie",
-    description: null,
-    characteristics: null,
-    type: null,
-    size: null,
+    description: "Collies love children and bond closely with all family members. They are protective of everyone in their family. As a herding dog, Collies may nip at your children’s heels or your neighbor's’ chickens in an attempt to herd them, while this might seem a bit frightening Collies are very gentle dogs.",
+    characteristics: "Devoted, gentle, affectionate, eager to please",
+    type: "Herding",
+    size: "Medium",
     rarity: false,
-    hypoallergenic: null,
-    friendliness: null,
-    friendliness_with_family: null,
-    good_with_children: null,
-    friendliness_with_strangers: null,
-    friendliness_with_dogs: null,
-    lifestyle: null,
-    energy: null,
-    apartment_adaptability: null,
-    independence: null,
-    grooming: null,
-    trainability: null,
-    intelligence: null,
-    noisiness: null,
-    prey_drive: null,
-    wanderlust: null,
-    common_health_issues: null,
-    weight: null,
-    height: null,
-    coat_length: null,
-    lifespan: null
+    hypoallergenic: false,
+    friendliness: "Collies are excellent family companions. They love playing with children and think everyone is their friend. They get along with other pets and may have herding tendencies with neighborhood cats and dogs as well as children. Collies thrive when they spend time with people.",
+    friendliness_with_family: 5,
+    good_with_children: 5,
+    friendliness_with_strangers: 4,
+    friendliness_with_dogs: 4,
+    lifestyle: "Collies need exercise, this can involve running in a fenced yard or going for a brisk 45 minute walk. After daily exercise, Collies are a calm house dog. Apartments are not ideal for Collies unless there is somewhere to exercise. Collies need people, left alone for long periods Collies will become bored and spend their time barking.",
+    energy: 3,
+    apartment_adaptability: 2,
+    independence: 2,
+    grooming: 2,
+    trainability: "Collies do well at canine sports such as herding trials, agility, obedience and lure courses. They are intelligent and generally easy to train if handled properly. Collies are sensitive and become depressed if spoken to harshly, negating the purpose of the training.",
+    intelligence: 4,
+    noisiness: 4,
+    prey_drive: 4,
+    wanderlust: 1,
+    common_health_issues: "Progressive retinal atrophy, collie eye anomaly",
+    weight: "51-75 lbs",
+    height: "20-24 in",
+    coat_length: " Long",
+    lifespan: "12-14 Years"
   },
   dachshund: {
     breed: "Dachshund",
-    description: null,
-    characteristics: null,
-    type: null,
-    size: null,
+    description: "Dachshunds are scent hounds and were bred to hunt badgers and other tunneling animals. While they can be playful family dogs, Dachshunds have a tendency to bond with one family member, becoming jealous and snappy when they are expected to share their owner's attention.",
+    characteristics: "Independent, playful, stubborn, mischievous, loyal",
+    type: "Hound",
+    size: "Small",
     rarity: false,
-    hypoallergenic: null,
-    friendliness: null,
-    friendliness_with_family: null,
-    good_with_children: null,
-    friendliness_with_strangers: null,
-    friendliness_with_dogs: null,
-    lifestyle: null,
-    energy: null,
-    apartment_adaptability: null,
-    independence: null,
-    grooming: null,
-    trainability: null,
-    intelligence: null,
-    noisiness: null,
-    prey_drive: null,
-    wanderlust: null,
-    common_health_issues: null,
-    weight: null,
-    height: null,
-    coat_length: null,
-    lifespan: null
+    hypoallergenic: false,
+    friendliness: "Dachshunds are usually a one-person dog. Socialization as a puppy is important because Dachshunds, by nature, are suspicious of strangers. They can be entertaining as well as fearless and enjoy bestowing affection on their person. Dachshunds like to have their own way, but doing this in a playful way makes it seem entertaining.",
+    friendliness_with_family: 4,
+    good_with_children: 3,
+    friendliness_with_strangers: 2,
+    friendliness_with_dogs: 3,
+    lifestyle: "Dachshunds are very adaptable and can be happy living in an apartment. While they enjoy the occasional trip outside to play they are not overly energetic and can be good companions. It is important to discourage jumping and rough play as Dachshunds have injury-prone backs.",
+    energy: 3,
+    apartment_adaptability: 5,
+    independence: 3,
+    grooming: 2,
+    trainability: "In order to train a Dachshund it is important to assert pack leadership. If the owner does not establish pack leadership with their Dachshund, training can be difficult. Behavioral issues such as separation anxiety, snapping and overzealous barking can also develop as a result.",
+    intelligence: 4,
+    noisiness: 5,
+    prey_drive: 5,
+    wanderlust: 5,
+    common_health_issues: "Obesity, intervertebral disk disease, eye problems",
+    weight: "9-26 lbs",
+    height: "5-9 in",
+    coat_length: "Short or Long",
+    lifespan: "12-15 Years"
   },
   dobermanPinscher: {
     breed: "Doberman Pinscher",
@@ -1430,66 +1430,37 @@ console.log(dogBreeds[breedList].breed + " " + dogBreeds[breedList].description)
 // pretend we clicked on yorkshireTerrier
 var breed = "akita";
 // Log all information about the selected breed
-console.log(
-  "Breed Name:" + " " + dogBreeds[breed].breed + " " +
-  "Description:" + " " + dogBreeds[breed].description + " " +
-  "Characteristics:" + " " + dogBreeds[breed].characteristics + " " +
-  "Type:" + " " + dogBreeds[breed].type + " " +
-  "Size:" + " " + dogBreeds[breed].size + " " +
-  "Rarity:" + " " + dogBreeds[breed].rarity + " " +
-  "Hypoallergenic:" + " " + dogBreeds[breed].hypoallergenic + " " +
-  "Friendliness:" + " " + dogBreeds[breed].friendliness + " " +
-  "Friendliness With Family:" + " " + dogBreeds[breed].friendliness_with_family + " " +
-  "Good With Children:" + " " + dogBreeds[breed].good_with_children + " " +
-  "Friendliness With Strangers:" + " " + dogBreeds[breed].friendliness_with_strangers + " " +
-  "Friendliness With Dogs:" + " " + dogBreeds[breed].friendliness_with_dogs + " " +
-  "Lifestyle:" + " " + dogBreeds[breed].lifestyle + " " +
-  "Energy:" + " " + dogBreeds[breed].energy + " " +
-  "Apartment Adaptability:" + " " + dogBreeds[breed].apartment_adaptability + " " +
-  "Independence:" + " " + dogBreeds[breed].independence + " " +
-  "Grooming:" + " " + dogBreeds[breed].grooming + " " +
-  "Trainability :" + " " + dogBreeds[breed].trainability + " " +
-  "Intelligence:" + " " + dogBreeds[breed].intelligence + " " +
-  "Noisiness :" + " " + dogBreeds[breed].noisiness + " " +
-  "Prey Drive:" + " " + dogBreeds[breed].prey_drive + " " +
-  "Wanderlust:" + " " + dogBreeds[breed].wanderlust + " " +
-  "Health Issues:" + " " + dogBreeds[breed].common_health_issues + " " +
-  "Weight:" + " " + dogBreeds[breed].weight + " " +
-  "Height:" + " " + dogBreeds[breed].height + " " +
-  "Coat Length:" + " " + dogBreeds[breed].coat_length + " " +
-  "Lifespan:" + " " + dogBreeds[breed].lifespan
-);
 
 // log Without descriptors
-// console.log(
-//   dogBreeds[breed].breed + " "
-//   + dogBreeds[breed].description + " "
-//   + dogBreeds[breed].characteristics + " "
-//   + dogBreeds[breed].type + " "
-//   + dogBreeds[breed].size + " "
-//   + dogBreeds[breed].rarity + " "
-//   + dogBreeds[breed].hypoallergenic + " "
-//   + dogBreeds[breed].friendliness + " "
-//   + dogBreeds[breed].friendliness_with_family + " "
-//   + dogBreeds[breed].good_with_children + " "
-//   + dogBreeds[breed].friendliness_with_strangers + " "
-//   + dogBreeds[breed].friendliness_with_dogs + " "
-//   + dogBreeds[breed].lifestyle + " "
-//   + dogBreeds[breed].energy + " "
-//   + dogBreeds[breed].apartment_adaptability + " "
-//   + dogBreeds[breed].independence + " "
-//   + dogBreeds[breed].grooming + " "
-//   + dogBreeds[breed].trainability + " "
-//   + dogBreeds[breed].intelligence + " "
-//   + dogBreeds[breed].noisiness + " "
-//   + dogBreeds[breed].prey_drive + " "
-//   + dogBreeds[breed].wanderlust + " "
-//   + dogBreeds[breed].common_health_issues + " "
-//   + dogBreeds[breed].weight + " "
-//   + dogBreeds[breed].height + " "
-//   + dogBreeds[breed].coat_length + " "
-//   + dogBreeds[breed].lifespan
-// );
+console.log(
+  dogBreeds[breed].breed + " "
+  + dogBreeds[breed].description + " "
+  + dogBreeds[breed].characteristics + " "
+  + dogBreeds[breed].type + " "
+  + dogBreeds[breed].size + " "
+  + dogBreeds[breed].rarity + " "
+  + dogBreeds[breed].hypoallergenic + " "
+  + dogBreeds[breed].friendliness + " "
+  + dogBreeds[breed].friendliness_with_family + " "
+  + dogBreeds[breed].good_with_children + " "
+  + dogBreeds[breed].friendliness_with_strangers + " "
+  + dogBreeds[breed].friendliness_with_dogs + " "
+  + dogBreeds[breed].lifestyle + " "
+  + dogBreeds[breed].energy + " "
+  + dogBreeds[breed].apartment_adaptability + " "
+  + dogBreeds[breed].independence + " "
+  + dogBreeds[breed].grooming + " "
+  + dogBreeds[breed].trainability + " "
+  + dogBreeds[breed].intelligence + " "
+  + dogBreeds[breed].noisiness + " "
+  + dogBreeds[breed].prey_drive + " "
+  + dogBreeds[breed].wanderlust + " "
+  + dogBreeds[breed].common_health_issues + " "
+  + dogBreeds[breed].weight + " "
+  + dogBreeds[breed].height + " "
+  + dogBreeds[breed].coat_length + " "
+  + dogBreeds[breed].lifespan
+);
 
 // Create an Array of Dog Breeds
 var dogBreedArray = []
@@ -1508,6 +1479,5 @@ dogBreedArray.sort();
 for (i = 0; i < dogBreedArray.length; i++) {
   console.log(dogBreeds[dogBreedArray[i]].breed);
   console.log(dogBreeds[dogBreedArray[i]].description);
-  // array[0]  // "camaro"
-  // object[camaro].model
+
 }
