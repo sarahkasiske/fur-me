@@ -1,40 +1,9 @@
+/*Text Styling */
+
 body, h1, h2, h3, h4, h5, h6, p{
   font-family: 'Heebo', sans-serif;
 }
 
-/*Navbar Styling*/
-
-nav .top-bar-title a {
-    color: #1E1F1E;
-}
-
-nav li a {
-  color: #1E1F1E;
-}
-
-nav li a:hover {
-  color: #FF8B61;
-}
-
-.menu .active a {
-  background-color: #FF8B61;
-}
-
-.sticky {
-  width: 100%;
-}
-
-.top-bar, .top-bar ul {
-  background-color: white;
-}
-
-.top-bar {
-  border-bottom: solid;
-  border-bottom-width: 1px;
-  border-color: #efefef;
-}
-
-/*Text Styling */
 h1 {
   font-size: 30px;
 }
@@ -46,7 +15,39 @@ h2 {
 h3 {
   font-size: 22px;
 }
+
+/* Navbar Styling */
+
+.sticky {
+  width: 100%;
+}
+
+.top-bar {
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: #efefef;
+}
+
+.top-bar, .top-bar ul {
+  background-color: white;
+}
+
+/* Links */
+
+nav .top-bar-title a, nav li a {
+    color: #1E1F1E;
+}
+
+nav li a:hover {
+  color: #FF8B61;
+}
+
+.menu .active a {
+  background-color: #FF8B61;
+}
+
 /*Side Bar Menu*/
+
 ul {
   list-style-type: none;
 }
@@ -55,9 +56,24 @@ ul.sidebar li a {
   color: #FF8B61;
 }
 
-/*Row Styling*/
+/* Row Styling */
 
 .row {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+
+/* Button Styling */
+
+.button {
+  background-color: white;
+  color: #1E1F1E;
+  border: solid;
+  border-width: 2px;
+  border-color: #FF8B61;
+}
+
+.button:hover {
+  background-color: #FF8B61;
 }

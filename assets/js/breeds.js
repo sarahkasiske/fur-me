@@ -1429,18 +1429,18 @@ var dogBreedArray = []
 for (var property in dogBreeds) {
   dogBreedArray.push(property);
 }
+//
+// for (var property in dogBreeds) {
+// // add the property to array
+// dogBreedArray.push(property);
+// "<img src='img/breeds/" + property + ".jpg' alt='" + dogBreeds[property].breed + "'/>";
+// }
 
 // Sort the Array of dog breeds alphebetically
 // Sort a-z
 // dogBreedArray.sort();
 // sort z-a
 // dogBreedArray.reverse();
-
-// for (i = 0; i < dogBreedArray.length; i++) {
-//   console.log(dogBreeds[dogBreedArray[i]].breed);
-//   console.log(dogBreeds[dogBreedArray[i]].description);
-//
-// }
 
 var body= document.querySelector("body");
 
@@ -1449,24 +1449,58 @@ function list (array) {
     var hr = document.createElement("hr");
     var div = document.createElement("div");
     div.className = "row large-12 columns";
+    var img = document.createElement("img");
+    img.setAttribute("src", "/img/breeds/" + (dogBreedArray[i]) + ".jpg");
+    img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
+    div.appendChild(img);
     var h2 = document.createElement("h2");
-    var p = document.createElement("p");
     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
+    h2.appendChild(h2Text);
+    div.appendChild(h2);
+    var p = document.createElement("p");
     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
+    p.appendChild(pText);
+    div.appendChild(p);
     var a = document.createElement("a");
     var aText = document.createTextNode("Learn More");
     a.className = "button";
     a.addEventListener("click", showBreed);
     body.appendChild(div);
-    h2.appendChild(h2Text);
-    div.appendChild(h2);
-    p.appendChild(pText);
-    div.appendChild(p);
     a.appendChild(aText);
     div.appendChild(a);
     body.appendChild(hr);
   }
 }
+//
+// function list (array) {
+//   for (i = 0; i < dogBreedArray.length; i++) {
+//     var hr = document.createElement("hr");
+//     var div = document.createElement("div");
+//     div.className = "row large-12 columns";
+//     // var img = document.createElement("img");
+//     // var imgText = document.createTextNode("<img src='img/breeds/" + property + ".jpg' alt='" + dogBreeds[property].breed + "'/>");
+//     var h2 = document.createElement("h2");
+//     var p = document.createElement("p");
+//     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
+//     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
+//     var a = document.createElement("a");
+//     var aText = document.createTextNode("Learn More");
+//     a.className = "button";
+//     a.addEventListener("click", showBreed);
+//     body.appendChild(div);
+//
+//     // img.appendChild(imgText);
+//     // div.appendChild(img);
+//
+//     h2.appendChild(h2Text);
+//     div.appendChild(h2);
+//     p.appendChild(pText);
+//     div.appendChild(p);
+//     a.appendChild(aText);
+//     div.appendChild(a);
+//     body.appendChild(hr);
+//   }
+// }
 
 // document.getElementById("demo").addEventListener("click", myFunction);
 //
