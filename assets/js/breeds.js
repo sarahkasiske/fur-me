@@ -145,8 +145,8 @@ var dogBreeds = {
     coat_length: "Medium",
     lifespan: "6-9 Years"
   },
-  bichonsFrise: {
-    breed: "Bichons Frise",
+  bichonFrise: {
+    breed: "Bichon Frise",
     description: "A descendant of the French Water Dog and the Poodle the Bichon Frise is a small, lively dog that loves attention. If you like being alone this dog might not be a good match. They are an attentive breed and become very attached to their families.",
     characteristics: "playful, curious, lively, attentive",
     type: "Non Sporting",
@@ -1448,26 +1448,32 @@ function list (array) {
   for (i = 0; i < dogBreedArray.length; i++) {
     var hr = document.createElement("hr");
     var div = document.createElement("div");
-    div.className = "row large-12 columns";
+    div.className = "row large-12 columns breedList";
+    body.appendChild(div);
+    var div3 = document.createElement("div");
+    div3.className = "large-4 columns";
+    div.appendChild(div3);
+    var div2 = document.createElement("div");
+    div2.className = "large-8 columns";
+    div.appendChild(div2);
     var img = document.createElement("img");
-    img.setAttribute("src", "/img/breeds/" + (dogBreedArray[i]) + ".jpg");
+    img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
     img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
-    div.appendChild(img);
+    div3.appendChild(img);
     var h2 = document.createElement("h2");
     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
     h2.appendChild(h2Text);
-    div.appendChild(h2);
+    div2.appendChild(h2);
     var p = document.createElement("p");
     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
     p.appendChild(pText);
-    div.appendChild(p);
+    div2.appendChild(p);
     var a = document.createElement("a");
-    var aText = document.createTextNode("Learn More");
     a.className = "button";
     a.addEventListener("click", showBreed);
-    body.appendChild(div);
+    var aText = document.createTextNode("Learn More");
     a.appendChild(aText);
-    div.appendChild(a);
+    div2.appendChild(a);
     body.appendChild(hr);
   }
 }

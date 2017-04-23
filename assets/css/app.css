@@ -10,6 +10,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  /*padding-top: 20px;*/
 }
 
 h3 {
@@ -59,7 +60,7 @@ ul.sidebar li a {
 /* Row Styling */
 
 .row {
-  padding-top: 10px;
+  padding-top: 25px;
   padding-bottom: 10px;
 }
 
@@ -76,4 +77,8 @@ ul.sidebar li a {
 
 .button:hover {
   background-color: #FF8B61;
+}
+
+img{
+padding-bottom: 15px;
 }
