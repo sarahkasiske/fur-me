@@ -1422,19 +1422,14 @@ var dogBreeds = {
     lifespan: "12-15 Years"
   }
 }
+
 // Create an Array of Dog Breeds
 var dogBreedArray = []
 
-//add the properties(objects) in the DogBreeds Object into the Dog Breeds Array
+//Add the properties(objects) in the DogBreeds Object into the Dog Breeds Array
 for (var property in dogBreeds) {
   dogBreedArray.push(property);
 }
-//
-// for (var property in dogBreeds) {
-// // add the property to array
-// dogBreedArray.push(property);
-// "<img src='img/breeds/" + property + ".jpg' alt='" + dogBreeds[property].breed + "'/>";
-// }
 
 // Sort the Array of dog breeds alphebetically
 // Sort a-z
@@ -1444,113 +1439,86 @@ for (var property in dogBreeds) {
 
 var body= document.querySelector("body");
 
+// List Dog Breeds
 function list (array) {
   for (i = 0; i < dogBreedArray.length; i++) {
+    // Create hr to go at t
     var hr = document.createElement("hr");
+    // Create div element to contain list item
     var div = document.createElement("div");
-    div.className = "row large-12 columns breedList";
+    div.className = "row small-12 columns breedList";
     body.appendChild(div);
+    // Create div element to contain an image of the dog breed
     var div3 = document.createElement("div");
     div3.className = "large-4 columns";
     div.appendChild(div3);
+    // Create div element to contain the dog breed name, description and show breed button
     var div2 = document.createElement("div");
     div2.className = "large-8 columns";
     div.appendChild(div2);
+    // Create img element that displays an image of the dog breed
     var img = document.createElement("img");
     img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
     img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
     div3.appendChild(img);
+    // Create h2 element with the dog breeds name
     var h2 = document.createElement("h2");
     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
     h2.appendChild(h2Text);
     div2.appendChild(h2);
+    // Create p element with the dog breeds descripton
     var p = document.createElement("p");
     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
     p.appendChild(pText);
     div2.appendChild(p);
+    // Create show breed button that calls the function showBreed
     var a = document.createElement("a");
     a.className = "button";
+    a.setAttribute("id", dogBreedArray[i]);
     a.addEventListener("click", showBreed);
     var aText = document.createTextNode("Learn More");
     a.appendChild(aText);
     div2.appendChild(a);
+    // Add hr at bottom of div
     body.appendChild(hr);
   }
 }
-//
-// function list (array) {
-//   for (i = 0; i < dogBreedArray.length; i++) {
-//     var hr = document.createElement("hr");
-//     var div = document.createElement("div");
-//     div.className = "row large-12 columns";
-//     // var img = document.createElement("img");
-//     // var imgText = document.createTextNode("<img src='img/breeds/" + property + ".jpg' alt='" + dogBreeds[property].breed + "'/>");
-//     var h2 = document.createElement("h2");
-//     var p = document.createElement("p");
-//     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
-//     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
-//     var a = document.createElement("a");
-//     var aText = document.createTextNode("Learn More");
-//     a.className = "button";
-//     a.addEventListener("click", showBreed);
-//     body.appendChild(div);
-//
-//     // img.appendChild(imgText);
-//     // div.appendChild(img);
-//
-//     h2.appendChild(h2Text);
-//     div.appendChild(h2);
-//     p.appendChild(pText);
-//     div.appendChild(p);
-//     a.appendChild(aText);
-//     div.appendChild(a);
-//     body.appendChild(hr);
-//   }
-// }
-
-// document.getElementById("demo").addEventListener("click", myFunction);
-//
-// function myFunction() {
-//     dogBreedArray.reverse();
-//     console.log("YAY!")
-// }
-
-// function Sort() {
-//   dogBreedArray.reverse();
-// }
-
 list(dogBreedArray);
 
-var breed = "akita";
+// Display information on clicked breed
+function showBreed(event){
+  // console.log(event.target.id);
+  for (i = 0; i < dogBreedArray.length; i++) {
+    if (event.target.id == (dogBreedArray[i])){
+      console.log(dogBreeds[dogBreedArray[i]].breed);
+      breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
+      breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
+      breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
+      breedType.textContent = (dogBreeds[dogBreedArray[i]].type);
+      breedSize.textContent = (dogBreeds[dogBreedArray[i]].size);
+      breedRarity.textContent = (dogBreeds[dogBreedArray[i]].rarity);
+      breedHypoallergenic.textContent = (dogBreeds[dogBreedArray[i]].hypoallergenic);
+      breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
+      breedFamilyFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_family);
+      breedChildrenFriendliness.textContent = (dogBreeds[dogBreedArray[i]].good_with_children);
+      breedStrangerFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_strangers);
+      breedDogFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_dogs);
+      breedLifestyle.textContent = (dogBreeds[dogBreedArray[i]].lifestyle);
+      breedEnergy.textContent = (dogBreeds[dogBreedArray[i]].energy);
+      breedAdaptability.textContent = (dogBreeds[dogBreedArray[i]].apartment_adaptability);
+      breedIndependence.textContent = (dogBreeds[dogBreedArray[i]].independence);
+      breedGrooming.textContent = (dogBreeds[dogBreedArray[i]].grooming);
+      breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
+      breedIntelligence.textContent = (dogBreeds[dogBreedArray[i]].intelligence);
+      breedNoisiness.textContent = (dogBreeds[dogBreedArray[i]].noisiness);
+      breedPreyDrive.textContent = (dogBreeds[dogBreedArray[i]].prey_drive);
+      breedWanderlust.textContent = (dogBreeds[dogBreedArray[i]].wanderlust);
+      breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
+      breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
+      breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
+      breedCoatLength.textContent = (dogBreeds[dogBreedArray[i]].coat_length);
+      breedLifespan.textContent = (dogBreeds[dogBreedArray[i]].lifespan);
 
-function showBreed() {
-  console.log(
-    dogBreeds[breed].breed + " "
-    + dogBreedArray[i].description + " "
-    + dogBreedArray[i].characteristics + " "
-    + dogBreedArray[i].type + " "
-    + dogBreeds[breed].size + " "
-    + dogBreeds[breed].rarity + " "
-    + dogBreeds[breed].hypoallergenic + " "
-    + dogBreeds[breed].friendliness + " "
-    + dogBreeds[breed].friendliness_with_family + " "
-    + dogBreeds[breed].good_with_children + " "
-    + dogBreeds[breed].friendliness_with_strangers + " "
-    + dogBreeds[breed].friendliness_with_dogs + " "
-    + dogBreeds[breed].lifestyle + " "
-    + dogBreeds[breed].energy + " "
-    + dogBreeds[breed].apartment_adaptability + " "
-    + dogBreeds[breed].independence + " "
-    + dogBreeds[breed].grooming + " "
-    + dogBreeds[breed].trainability + " "
-    + dogBreeds[breed].intelligence + " "
-    + dogBreeds[breed].noisiness + " "
-    + dogBreeds[breed].prey_drive + " "
-    + dogBreeds[breed].wanderlust + " "
-    + dogBreeds[breed].common_health_issues + " "
-    + dogBreeds[breed].weight + " "
-    + dogBreeds[breed].height + " "
-    + dogBreeds[breed].coat_length + " "
-    + dogBreeds[breed].lifespan
-  );
+      }
+  }
 }

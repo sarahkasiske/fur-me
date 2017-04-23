@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 /* Navbar Styling */
@@ -60,10 +60,21 @@ ul.sidebar li a {
 /* Row Styling */
 
 .row {
-  padding-top: 25px;
+  padding-top: 85px;
+  margin-top: -60px;
   padding-bottom: 10px;
 }
 
+div.medium-3.columns.border-right, div.medium-3.columns {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+div .border-right {
+    border-right: solid;
+    border-width: 1px;
+    border-color: #FF8B61;
+}
 
 /* Button Styling */
 
