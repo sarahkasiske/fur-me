@@ -93,3 +93,9 @@ div .border-right {
 img{
 padding-bottom: 15px;
 }
+
+p {
+  width: 100%;
+  background-image: url("/Users/sarahkasiske/Desktop/fur-me/assets/img/star.png");
+  background-repeat: no-repeat;
+}

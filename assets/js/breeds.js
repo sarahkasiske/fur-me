@@ -1,3 +1,4 @@
+
 // Dog Breeds
 var dogBreeds = {
   akita: {
@@ -1490,7 +1491,7 @@ function showBreed(event){
   // console.log(event.target.id);
   for (i = 0; i < dogBreedArray.length; i++) {
     if (event.target.id == (dogBreedArray[i])){
-      console.log(dogBreeds[dogBreedArray[i]].breed);
+      // console.log(dogBreeds[dogBreedArray[i]].breed);
       breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
       breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
       breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
@@ -1499,7 +1500,7 @@ function showBreed(event){
       breedRarity.textContent = (dogBreeds[dogBreedArray[i]].rarity);
       breedHypoallergenic.textContent = (dogBreeds[dogBreedArray[i]].hypoallergenic);
       breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
-      breedFamilyFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_family);
+      breedFamilyFriendliness.textContent = starBuilder((dogBreeds[dogBreedArray[i]].friendliness_with_family));
       breedChildrenFriendliness.textContent = (dogBreeds[dogBreedArray[i]].good_with_children);
       breedStrangerFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_strangers);
       breedDogFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_dogs);
@@ -1518,7 +1519,25 @@ function showBreed(event){
       breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
       breedCoatLength.textContent = (dogBreeds[dogBreedArray[i]].coat_length);
       breedLifespan.textContent = (dogBreeds[dogBreedArray[i]].lifespan);
-
-      }
+    }
   }
 }
+
+function starBuilder(howMany) {
+  for (i = 0; i < howMany; i++) {
+  var starImg = document.createElement("img");
+    starImg.setAttribute("src", "assets/img/star.png" );
+    starImg.setAttribute("alt", 'star');
+    body.appendChild(starImg);
+  }
+}
+
+starBuilder(3);
+
+
+// function starBuilder(id, howMany) {
+//   var starImg = "<img src='img/star.png' alt='star' />"
+//   for (i = 0; i < howMany; i++) {
+//     document.querySelector("#" + id).innerHTML += starImg;
+//   }
+// }
