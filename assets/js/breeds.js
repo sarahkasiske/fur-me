@@ -1500,20 +1500,34 @@ function showBreed(event){
       breedRarity.textContent = (dogBreeds[dogBreedArray[i]].rarity);
       breedHypoallergenic.textContent = (dogBreeds[dogBreedArray[i]].hypoallergenic);
       breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
-      breedFamilyFriendliness.textContent = starBuilder((dogBreeds[dogBreedArray[i]].friendliness_with_family));
-      breedChildrenFriendliness.textContent = (dogBreeds[dogBreedArray[i]].good_with_children);
-      breedStrangerFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_strangers);
-      breedDogFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness_with_dogs);
+      var friendlinessWithFamily = dogBreeds[dogBreedArray[i]].friendliness_with_family;
+      starBuilder('breedFamilyFriendliness', friendlinessWithFamily );
+      var goodWithChildren = dogBreeds[dogBreedArray[i]].good_with_children;
+      starBuilder('breedChildrenFriendliness', goodWithChildren);
+      var friendlinessWithStrangers = dogBreeds[dogBreedArray[i]].friendliness_with_strangers;
+      starBuilder('breedStrangerFriendliness', friendlinessWithStrangers);
+      var friendlinessWithDogs = dogBreeds[dogBreedArray[i]].friendliness_with_dogs;
+      starBuilder('breedDogFriendliness', friendlinessWithDogs);
       breedLifestyle.textContent = (dogBreeds[dogBreedArray[i]].lifestyle);
-      breedEnergy.textContent = (dogBreeds[dogBreedArray[i]].energy);
-      breedAdaptability.textContent = (dogBreeds[dogBreedArray[i]].apartment_adaptability);
-      breedIndependence.textContent = (dogBreeds[dogBreedArray[i]].independence);
-      breedGrooming.textContent = (dogBreeds[dogBreedArray[i]].grooming);
+      var energy = dogBreeds[dogBreedArray[i]].energy;
+      starBuilder('breedEnergy', energy);
+      var apartmentAdaptability = dogBreeds[dogBreedArray[i]].apartment_adaptability;
+      starBuilder('breedAdaptability', apartmentAdaptability);
+      var independence = dogBreeds[dogBreedArray[i]].independence;
+      starBuilder('breedIndependence', independence);
+      var grooming = dogBreeds[dogBreedArray[i]].grooming;
+      starBuilder('breedGrooming', independence);
       breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
-      breedIntelligence.textContent = (dogBreeds[dogBreedArray[i]].intelligence);
-      breedNoisiness.textContent = (dogBreeds[dogBreedArray[i]].noisiness);
-      breedPreyDrive.textContent = (dogBreeds[dogBreedArray[i]].prey_drive);
-      breedWanderlust.textContent = (dogBreeds[dogBreedArray[i]].wanderlust);
+
+      var intelligence = dogBreeds[dogBreedArray[i]].intelligence;
+      starBuilder('breedIntelligence', intelligence);
+      var noisiness = dogBreeds[dogBreedArray[i]].noisiness;
+      starBuilder('breedNoisiness', noisiness);
+      var preyDrive = dogBreeds[dogBreedArray[i]].prey_drive;
+      starBuilder('breedPreyDrive', preyDrive);
+      var wanderlust = dogBreeds[dogBreedArray[i]].wanderlust;
+      starBuilder('breedWanderlust', wanderlust);
+
       breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
       breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
       breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
@@ -1523,20 +1537,48 @@ function showBreed(event){
   }
 }
 
-function starBuilder(howMany) {
-  for (i = 0; i < howMany; i++) {
-  var starImg = document.createElement("img");
-    starImg.setAttribute("src", "assets/img/star.png" );
-    starImg.setAttribute("alt", 'star');
-    body.appendChild(starImg);
-  }
+function starBuilder(id, rating) {
+  console.log(rating);
+  console.log(id);
+  var i = 0;
+  // reset when different dog breed is clicked
+  document.querySelector("#" + id).innerHTML = "";
+  var starImgBackground = "<img class='starBackground' src='assets/img/stars.png' alt='star' />";
+  document.querySelector("#" + id).innerHTML += starImgBackground;
+  while (i < rating) {
+  var starImg = "<img class='star' src='assets/img/star.png' alt='star' />"
+  document.querySelector("#" + id).innerHTML += starImg;
+    console.log(i);
+    i++;
+
+  };
+
 }
 
-starBuilder(3);
+// function starBuilder(id, howMany) {
+//   console.log(howMany);
+//   console.log(id);
+//   var i = 0;
+//   reset when close out of dog breed
+//   clear starRating when close out
+//   body.innerHTML = "";
+//   while (i < howMany) {
+//   var starImg = document.createElement("img");
+//     starImg.setAttribute("src", "assets/img/star.png" );
+//     starImg.setAttribute("alt", 'star');
+//     document.querySelector("#" + id).innerHTML.appendChild(starImg);
+//     console.log(i);
+//     i++;
+//
+//   };
+//
+// }
+
+// starBuilder(3);
 
 
 // function starBuilder(id, howMany) {
-//   var starImg = "<img src='img/star.png' alt='star' />"
+//   var starImg = "<img src='assets/img/star.png' alt='star' />"
 //   for (i = 0; i < howMany; i++) {
 //     document.querySelector("#" + id).innerHTML += starImg;
 //   }
