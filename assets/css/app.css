@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 /* Navbar Styling */
@@ -94,14 +94,6 @@ img{
 padding-bottom: 15px;
 }
 
-img.starBackground {
-  position: absolute;
-
-}
-.starBackground {
-  z-index: 1;
-}
-.star {
-  position: relative;
-  z-index: 3;
+.fa-star, .fa-star-o, .orange  {
+  color: #FF8B61;
 }

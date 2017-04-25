@@ -26,7 +26,7 @@ var dogBreeds = {
     wanderlust: 4,
     common_health_issues: "Hip dysplasia, progressive retinal atrophy acquired myasthenia gravis, gastric dilatation volvulus",
     weight: "70-130 lbs",
-    height: "24-28 in.",
+    height: "24-28 in",
     coat_length: "Short",
     lifespan: "10-12 years"
   },
@@ -1474,31 +1474,40 @@ function list (array) {
     div2.appendChild(p);
     // Create show breed button that calls the function showBreed
     var a = document.createElement("a");
-    a.className = "button";
+    a.className = "button show";
     a.setAttribute("id", dogBreedArray[i]);
     a.addEventListener("click", showBreed);
     var aText = document.createTextNode("Learn More");
     a.appendChild(aText);
     div2.appendChild(a);
     // Add hr at bottom of div
-    body.appendChild(hr);
+    div.appendChild(hr);
   }
 }
 list(dogBreedArray);
 
 // Display information on clicked breed
 function showBreed(event){
-  // console.log(event.target.id);
   for (i = 0; i < dogBreedArray.length; i++) {
     if (event.target.id == (dogBreedArray[i])){
-      // console.log(dogBreeds[dogBreedArray[i]].breed);
+      $(document).ready(function(){
+          $("#singleBreedView").show();
+          $(".breedList").hide();
+          $("#pageInformation").hide();
+          $('html,body').scrollTop(0);
+      });
+      // Create Image of Dog Breed
+      breedImage();
+      // Input information for Dog Breed
       breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
       breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
       breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
       breedType.textContent = (dogBreeds[dogBreedArray[i]].type);
       breedSize.textContent = (dogBreeds[dogBreedArray[i]].size);
-      breedRarity.textContent = (dogBreeds[dogBreedArray[i]].rarity);
-      breedHypoallergenic.textContent = (dogBreeds[dogBreedArray[i]].hypoallergenic);
+      var rarity = dogBreeds[dogBreedArray[i]].rarity;
+      rarityCheck('breedRarity', rarity);
+      var hypoallergenic = dogBreeds[dogBreedArray[i]].hypoallergenic;
+      hypoallergenicCheck('breedHypoallergenic', hypoallergenic);
       breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
       var friendlinessWithFamily = dogBreeds[dogBreedArray[i]].friendliness_with_family;
       starBuilder('breedFamilyFriendliness', friendlinessWithFamily );
@@ -1518,7 +1527,6 @@ function showBreed(event){
       var grooming = dogBreeds[dogBreedArray[i]].grooming;
       starBuilder('breedGrooming', independence);
       breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
-
       var intelligence = dogBreeds[dogBreedArray[i]].intelligence;
       starBuilder('breedIntelligence', intelligence);
       var noisiness = dogBreeds[dogBreedArray[i]].noisiness;
@@ -1527,7 +1535,6 @@ function showBreed(event){
       starBuilder('breedPreyDrive', preyDrive);
       var wanderlust = dogBreeds[dogBreedArray[i]].wanderlust;
       starBuilder('breedWanderlust', wanderlust);
-
       breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
       breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
       breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
@@ -1537,49 +1544,57 @@ function showBreed(event){
   }
 }
 
+//Creates and displays 5 star ratings
 function starBuilder(id, rating) {
-  console.log(rating);
-  console.log(id);
   var i = 0;
   // reset when different dog breed is clicked
   document.querySelector("#" + id).innerHTML = "";
-  var starImgBackground = "<img class='starBackground' src='assets/img/stars.png' alt='star' />";
-  document.querySelector("#" + id).innerHTML += starImgBackground;
-  while (i < rating) {
-  var starImg = "<img class='star' src='assets/img/star.png' alt='star' />"
-  document.querySelector("#" + id).innerHTML += starImg;
-    console.log(i);
+  p = document.querySelector("#" + id);
+  while (i < 5) {
+    while (i < rating) {
+      var starImg = document.createElement("i");
+      starImg.className = "fa fa-star";
+      p.appendChild(starImg)
+      i++;
+    };
+    if(rating != 5){
+    var starImg = document.createElement("i");
+    starImg.className = "fa fa-star-o";
+    p.appendChild(starImg)
     i++;
-
-  };
-
+    }
+  }
 }
 
-// function starBuilder(id, howMany) {
-//   console.log(howMany);
-//   console.log(id);
-//   var i = 0;
-//   reset when close out of dog breed
-//   clear starRating when close out
-//   body.innerHTML = "";
-//   while (i < howMany) {
-//   var starImg = document.createElement("img");
-//     starImg.setAttribute("src", "assets/img/star.png" );
-//     starImg.setAttribute("alt", 'star');
-//     document.querySelector("#" + id).innerHTML.appendChild(starImg);
-//     console.log(i);
-//     i++;
-//
-//   };
-//
-// }
+//Generates an image of a selected dog breed
+function breedImage() {
+  document.querySelector("#breedImage").innerHTML ="";
+  // Create Image of Dog Breed
+  var div = document.querySelector("#breedImage");
+  var img = document.createElement("img");
+  img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
+  img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
+  div.appendChild(img);
+}
 
-// starBuilder(3);
+//Checks if a breed is rare and then prints rare or not rare
+function rarityCheck(id, boolean) {
+  if (boolean == false) {
+    breedRarity.textContent = "Not Rare";
+  }else {
+    breedRarity.textContent = "Rare";
+  }
+}
 
+//Checks if a breed is hypoallergenic and then prints hypoallergenicor not hypoallergenic
+function hypoallergenicCheck(id, boolean) {
+  if (boolean == false) {
+    breedHypoallergenic.textContent = "Not Hypoallergenic";
+  }else {
+    breedHypoallergenic.textContent = "Hypoallergenic";
+  }
+}
 
-// function starBuilder(id, howMany) {
-//   var starImg = "<img src='assets/img/star.png' alt='star' />"
-//   for (i = 0; i < howMany; i++) {
-//     document.querySelector("#" + id).innerHTML += starImg;
-//   }
-// }
+$(document).ready(function(){
+    $("#singleBreedView").hide()
+});
