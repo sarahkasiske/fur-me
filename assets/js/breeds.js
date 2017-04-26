@@ -1459,14 +1459,14 @@ function list (array) {
     div.appendChild(div2);
     // Create img element that displays an image of the dog breed
     var img = document.createElement("img");
-    img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
+    img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + "-small.jpg");
     img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
     div3.appendChild(img);
     // Create h2 element with the dog breeds name
     var h2 = document.createElement("h2");
     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
     h2.appendChild(h2Text);
-    div2.appendChild(h2);
+    div2.appendChild(h2); 
     // Create p element with the dog breeds descripton
     var p = document.createElement("p");
     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
