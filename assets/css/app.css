@@ -90,9 +90,25 @@ div .border-right {
   background-color: #FF8B61;
 }
 
+/*Back link*/
+
+#back a{
+    color: #FF8B61;
+    font-size: 30;
+}
+
+#back a:hover {
+  color: #e27953;
+}
+
+
+/*Image Syle*/
+
 img{
 padding-bottom: 15px;
 }
+
+/*Rating System Style*/
 
 .fa-star, .fa-star-o, .orange  {
   color: #FF8B61;

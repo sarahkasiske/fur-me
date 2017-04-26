@@ -1443,72 +1443,115 @@ var body= document.querySelector("body");
 // List Dog Breeds
 function list (array) {
   for (i = 0; i < dogBreedArray.length; i++) {
-    // Create hr to go at t
+
+    // Create hr element
     var hr = document.createElement("hr");
+
     // Create div element to contain list item
     var div = document.createElement("div");
     div.className = "row small-12 columns breedList";
     body.appendChild(div);
+
     // Create div element to contain an image of the dog breed
     var div3 = document.createElement("div");
     div3.className = "large-4 columns";
     div.appendChild(div3);
+
     // Create div element to contain the dog breed name, description and show breed button
     var div2 = document.createElement("div");
     div2.className = "large-8 columns";
     div.appendChild(div2);
+
     // Create img element that displays an image of the dog breed
     var img = document.createElement("img");
     img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + "-small.jpg");
     img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
     div3.appendChild(img);
+
     // Create h2 element with the dog breeds name
     var h2 = document.createElement("h2");
     var h2Text = document.createTextNode(dogBreeds[dogBreedArray[i]].breed);
     h2.appendChild(h2Text);
-    div2.appendChild(h2); 
+    div2.appendChild(h2);
+
     // Create p element with the dog breeds descripton
     var p = document.createElement("p");
     var pText = document.createTextNode(dogBreeds[dogBreedArray[i]].description);
     p.appendChild(pText);
     div2.appendChild(p);
+
     // Create show breed button that calls the function showBreed
     var a = document.createElement("a");
-    a.className = "button show";
+    a.className = "button";
     a.setAttribute("id", dogBreedArray[i]);
     a.addEventListener("click", showBreed);
     var aText = document.createTextNode("Learn More");
     a.appendChild(aText);
     div2.appendChild(a);
+
     // Add hr at bottom of div
     div.appendChild(hr);
   }
 }
+
+// <i class="fa fa-arrow-left" aria-hidden="true"></i>
+// List the dog breeds
 list(dogBreedArray);
 
 // Display information on clicked breed
 function showBreed(event){
+  // Jquery
+  $(document).ready(function(){
+      // Hide breed list
+      $(".breedList").hide();
+      $("#pageInformation").hide();
+      // Scroll to the top of the page
+      $('html,body').scrollTop(0);
+  });
+  // Loop Through dog breed and find a breed that matches the clicked breed
   for (i = 0; i < dogBreedArray.length; i++) {
     if (event.target.id == (dogBreedArray[i])){
-      $(document).ready(function(){
-          $("#singleBreedView").show();
-          $(".breedList").hide();
-          $("#pageInformation").hide();
-          $('html,body').scrollTop(0);
-      });
-      // Create Image of Dog Breed
+      // Show single breed view
+      document.querySelector("#singleBreedView").removeAttribute("style");
+
+      // Create Image of the dog breed
       breedImage();
-      // Input information for Dog Breed
+
+      // Create back button for single breed view
+      function back() {
+        var buttonContainer = document.querySelector("#back");
+        // Create link
+        var back = document.createElement('a');
+        // back.setAttribute('class', 'button');
+        back.setAttribute('href', 'breeds.html');
+        // Create back arrow
+        var backIcon= document.createElement("i");
+        backIcon.className = "fa fa-arrow-left";
+        back.appendChild(backIcon)
+        var backText = document.createTextNode(" View Other Breeds");
+        // back.appendChild(backText);
+        //add link to buttonContainer
+        buttonContainer.appendChild(back);
+      }
+      back();
+
+      // Display dog name, description and characteristics
       breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
       breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
       breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
       breedType.textContent = (dogBreeds[dogBreedArray[i]].type);
       breedSize.textContent = (dogBreeds[dogBreedArray[i]].size);
+
+      // Check if the dog breed is hypoallergenic or rare and display the results
       var rarity = dogBreeds[dogBreedArray[i]].rarity;
       rarityCheck('breedRarity', rarity);
       var hypoallergenic = dogBreeds[dogBreedArray[i]].hypoallergenic;
       hypoallergenicCheck('breedHypoallergenic', hypoallergenic);
+
+      // Display information about the friendliness of the dog breed
       breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
+
+      // Create Star ratings for breed friendliness
       var friendlinessWithFamily = dogBreeds[dogBreedArray[i]].friendliness_with_family;
       starBuilder('breedFamilyFriendliness', friendlinessWithFamily );
       var goodWithChildren = dogBreeds[dogBreedArray[i]].good_with_children;
@@ -1517,7 +1560,11 @@ function showBreed(event){
       starBuilder('breedStrangerFriendliness', friendlinessWithStrangers);
       var friendlinessWithDogs = dogBreeds[dogBreedArray[i]].friendliness_with_dogs;
       starBuilder('breedDogFriendliness', friendlinessWithDogs);
+
+      // Display information about the lifestyle of the dog breed
       breedLifestyle.textContent = (dogBreeds[dogBreedArray[i]].lifestyle);
+
+      // Create Star ratings for breed lifestyle
       var energy = dogBreeds[dogBreedArray[i]].energy;
       starBuilder('breedEnergy', energy);
       var apartmentAdaptability = dogBreeds[dogBreedArray[i]].apartment_adaptability;
@@ -1526,7 +1573,11 @@ function showBreed(event){
       starBuilder('breedIndependence', independence);
       var grooming = dogBreeds[dogBreedArray[i]].grooming;
       starBuilder('breedGrooming', independence);
+
+      // Display information about the trainability of the dog breed
       breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
+
+      // Create Star ratings for breed intelligence
       var intelligence = dogBreeds[dogBreedArray[i]].intelligence;
       starBuilder('breedIntelligence', intelligence);
       var noisiness = dogBreeds[dogBreedArray[i]].noisiness;
@@ -1535,6 +1586,8 @@ function showBreed(event){
       starBuilder('breedPreyDrive', preyDrive);
       var wanderlust = dogBreeds[dogBreedArray[i]].wanderlust;
       starBuilder('breedWanderlust', wanderlust);
+
+      // Display information about the health of the dog breed
       breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
       breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
       breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
@@ -1544,7 +1597,7 @@ function showBreed(event){
   }
 }
 
-//Creates and displays 5 star ratings
+// Creates and displays 5 star ratings
 function starBuilder(id, rating) {
   var i = 0;
   // reset when different dog breed is clicked
@@ -1566,7 +1619,7 @@ function starBuilder(id, rating) {
   }
 }
 
-//Generates an image of a selected dog breed
+// Generates an image of a selected dog breed
 function breedImage() {
   document.querySelector("#breedImage").innerHTML ="";
   // Create Image of Dog Breed
@@ -1577,7 +1630,7 @@ function breedImage() {
   div.appendChild(img);
 }
 
-//Checks if a breed is rare and then prints rare or not rare
+// Checks if a breed is rare and then prints rare or not rare
 function rarityCheck(id, boolean) {
   if (boolean == false) {
     breedRarity.textContent = "Not Rare";
@@ -1586,7 +1639,7 @@ function rarityCheck(id, boolean) {
   }
 }
 
-//Checks if a breed is hypoallergenic and then prints hypoallergenicor not hypoallergenic
+// Checks if a breed is hypoallergenic and then prints hypoallergenicor not hypoallergenic
 function hypoallergenicCheck(id, boolean) {
   if (boolean == false) {
     breedHypoallergenic.textContent = "Not Hypoallergenic";
@@ -1594,7 +1647,3 @@ function hypoallergenicCheck(id, boolean) {
     breedHypoallergenic.textContent = "Hypoallergenic";
   }
 }
-
-$(document).ready(function(){
-    $("#singleBreedView").hide()
-});
