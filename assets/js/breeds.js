@@ -1449,7 +1449,7 @@ function list (array) {
 
     // Create div element to contain list item
     var div = document.createElement("div");
-    div.className = "row small-12 columns breedList";
+    div.className = "list row small-12 columns breedList";
     body.appendChild(div);
 
     // Create div element to contain an image of the dog breed
@@ -1498,6 +1498,34 @@ function list (array) {
 // List the dog breeds
 list(dogBreedArray);
 
+// Generates an image of a selected dog breed
+function breedImage() {
+  document.querySelector("#breedImage").innerHTML ="";
+  // Create Image of Dog Breed
+  var div = document.querySelector("#breedImage");
+  var img = document.createElement("img");
+  img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
+  img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
+  div.appendChild(img);
+}
+
+// Create back link for single breed view
+function goBack(link, text) {
+  var buttonContainer = document.querySelector("#back");
+  // Create link
+  var back = document.createElement('a');
+  // back.setAttribute('class', 'button');
+  back.setAttribute('href', link);
+  // Create back arrow
+  var backIcon= document.createElement("i");
+  backIcon.className = "fa fa-arrow-left";
+  back.appendChild(backIcon)
+  var backText = document.createTextNode(" "+text);
+  back.appendChild(backText);
+  //add link to buttonContainer
+  buttonContainer.appendChild(back);
+}
+
 // Display information on clicked breed
 function showBreed(event){
   // Jquery
@@ -1505,96 +1533,81 @@ function showBreed(event){
       // Hide breed list
       $(".breedList").hide();
       $("#pageInformation").hide();
-      // Scroll to the top of the page
-      $('html,body').scrollTop(0);
-  });
-  // Loop Through dog breed and find a breed that matches the clicked breed
-  for (i = 0; i < dogBreedArray.length; i++) {
-    if (event.target.id == (dogBreedArray[i])){
-      // Show single breed view
-      document.querySelector("#singleBreedView").removeAttribute("style");
 
-      // Create Image of the dog breed
-      breedImage();
+    // Loop Through dog breed and find a breed that matches the clicked breed
+    for (i = 0; i < dogBreedArray.length; i++) {
+      if (event.target.id == (dogBreedArray[i])){
+        // Show single breed view
+        document.querySelector("#singleBreedView").removeAttribute("style");
 
-      // Create back button for single breed view
-      function back() {
-        var buttonContainer = document.querySelector("#back");
-        // Create link
-        var back = document.createElement('a');
-        // back.setAttribute('class', 'button');
-        back.setAttribute('href', 'breeds.html');
-        // Create back arrow
-        var backIcon= document.createElement("i");
-        backIcon.className = "fa fa-arrow-left";
-        back.appendChild(backIcon)
-        var backText = document.createTextNode(" View Other Breeds");
-        // back.appendChild(backText);
-        //add link to buttonContainer
-        buttonContainer.appendChild(back);
+        // Create Image of the dog breed
+        breedImage();
+        // create back link
+        goBack('breeds.html', "Back to Breed List");
+
+        // Display dog name, description and characteristics
+        breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
+        breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
+        breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
+        breedType.textContent = (dogBreeds[dogBreedArray[i]].type);
+        breedSize.textContent = (dogBreeds[dogBreedArray[i]].size);
+
+        // Check if the dog breed is hypoallergenic or rare and display the results
+        var rarity = dogBreeds[dogBreedArray[i]].rarity;
+        rarityCheck('breedRarity', rarity);
+        var hypoallergenic = dogBreeds[dogBreedArray[i]].hypoallergenic;
+        hypoallergenicCheck('breedHypoallergenic', hypoallergenic);
+
+        // Display information about the friendliness of the dog breed
+        breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
+
+        // Create Star ratings for breed friendliness
+        var friendlinessWithFamily = dogBreeds[dogBreedArray[i]].friendliness_with_family;
+        starBuilder('breedFamilyFriendliness', friendlinessWithFamily );
+        var goodWithChildren = dogBreeds[dogBreedArray[i]].good_with_children;
+        starBuilder('breedChildrenFriendliness', goodWithChildren);
+        var friendlinessWithStrangers = dogBreeds[dogBreedArray[i]].friendliness_with_strangers;
+        starBuilder('breedStrangerFriendliness', friendlinessWithStrangers);
+        var friendlinessWithDogs = dogBreeds[dogBreedArray[i]].friendliness_with_dogs;
+        starBuilder('breedDogFriendliness', friendlinessWithDogs);
+
+        // Display information about the lifestyle of the dog breed
+        breedLifestyle.textContent = (dogBreeds[dogBreedArray[i]].lifestyle);
+
+        // Create Star ratings for breed lifestyle
+        var energy = dogBreeds[dogBreedArray[i]].energy;
+        starBuilder('breedEnergy', energy);
+        var apartmentAdaptability = dogBreeds[dogBreedArray[i]].apartment_adaptability;
+        starBuilder('breedAdaptability', apartmentAdaptability);
+        var independence = dogBreeds[dogBreedArray[i]].independence;
+        starBuilder('breedIndependence', independence);
+        var grooming = dogBreeds[dogBreedArray[i]].grooming;
+        starBuilder('breedGrooming', independence);
+
+        // Display information about the trainability of the dog breed
+        breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
+
+        // Create Star ratings for breed intelligence
+        var intelligence = dogBreeds[dogBreedArray[i]].intelligence;
+        starBuilder('breedIntelligence', intelligence);
+        var noisiness = dogBreeds[dogBreedArray[i]].noisiness;
+        starBuilder('breedNoisiness', noisiness);
+        var preyDrive = dogBreeds[dogBreedArray[i]].prey_drive;
+        starBuilder('breedPreyDrive', preyDrive);
+        var wanderlust = dogBreeds[dogBreedArray[i]].wanderlust;
+        starBuilder('breedWanderlust', wanderlust);
+
+        // Display information about the health of the dog breed
+        breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
+        breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
+        breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
+        breedCoatLength.textContent = (dogBreeds[dogBreedArray[i]].coat_length);
+        breedLifespan.textContent = (dogBreeds[dogBreedArray[i]].lifespan);
       }
-      back();
-
-      // Display dog name, description and characteristics
-      breedName.textContent = (dogBreeds[dogBreedArray[i]].breed);
-      breedDescription.textContent = (dogBreeds[dogBreedArray[i]].description);
-      breedCharacteristics.textContent = (dogBreeds[dogBreedArray[i]].characteristics);
-      breedType.textContent = (dogBreeds[dogBreedArray[i]].type);
-      breedSize.textContent = (dogBreeds[dogBreedArray[i]].size);
-
-      // Check if the dog breed is hypoallergenic or rare and display the results
-      var rarity = dogBreeds[dogBreedArray[i]].rarity;
-      rarityCheck('breedRarity', rarity);
-      var hypoallergenic = dogBreeds[dogBreedArray[i]].hypoallergenic;
-      hypoallergenicCheck('breedHypoallergenic', hypoallergenic);
-
-      // Display information about the friendliness of the dog breed
-      breedFriendliness.textContent = (dogBreeds[dogBreedArray[i]].friendliness);
-
-      // Create Star ratings for breed friendliness
-      var friendlinessWithFamily = dogBreeds[dogBreedArray[i]].friendliness_with_family;
-      starBuilder('breedFamilyFriendliness', friendlinessWithFamily );
-      var goodWithChildren = dogBreeds[dogBreedArray[i]].good_with_children;
-      starBuilder('breedChildrenFriendliness', goodWithChildren);
-      var friendlinessWithStrangers = dogBreeds[dogBreedArray[i]].friendliness_with_strangers;
-      starBuilder('breedStrangerFriendliness', friendlinessWithStrangers);
-      var friendlinessWithDogs = dogBreeds[dogBreedArray[i]].friendliness_with_dogs;
-      starBuilder('breedDogFriendliness', friendlinessWithDogs);
-
-      // Display information about the lifestyle of the dog breed
-      breedLifestyle.textContent = (dogBreeds[dogBreedArray[i]].lifestyle);
-
-      // Create Star ratings for breed lifestyle
-      var energy = dogBreeds[dogBreedArray[i]].energy;
-      starBuilder('breedEnergy', energy);
-      var apartmentAdaptability = dogBreeds[dogBreedArray[i]].apartment_adaptability;
-      starBuilder('breedAdaptability', apartmentAdaptability);
-      var independence = dogBreeds[dogBreedArray[i]].independence;
-      starBuilder('breedIndependence', independence);
-      var grooming = dogBreeds[dogBreedArray[i]].grooming;
-      starBuilder('breedGrooming', independence);
-
-      // Display information about the trainability of the dog breed
-      breedTrainability.textContent = (dogBreeds[dogBreedArray[i]].trainability);
-
-      // Create Star ratings for breed intelligence
-      var intelligence = dogBreeds[dogBreedArray[i]].intelligence;
-      starBuilder('breedIntelligence', intelligence);
-      var noisiness = dogBreeds[dogBreedArray[i]].noisiness;
-      starBuilder('breedNoisiness', noisiness);
-      var preyDrive = dogBreeds[dogBreedArray[i]].prey_drive;
-      starBuilder('breedPreyDrive', preyDrive);
-      var wanderlust = dogBreeds[dogBreedArray[i]].wanderlust;
-      starBuilder('breedWanderlust', wanderlust);
-
-      // Display information about the health of the dog breed
-      breedHealth.textContent = (dogBreeds[dogBreedArray[i]].common_health_issues);
-      breedWeight.textContent = (dogBreeds[dogBreedArray[i]].weight);
-      breedHeight.textContent = (dogBreeds[dogBreedArray[i]].height);
-      breedCoatLength.textContent = (dogBreeds[dogBreedArray[i]].coat_length);
-      breedLifespan.textContent = (dogBreeds[dogBreedArray[i]].lifespan);
     }
-  }
+    // Scroll to the top of the page
+    $('html,body').scrollTop(0);
+  });
 }
 
 // Creates and displays 5 star ratings
@@ -1619,16 +1632,7 @@ function starBuilder(id, rating) {
   }
 }
 
-// Generates an image of a selected dog breed
-function breedImage() {
-  document.querySelector("#breedImage").innerHTML ="";
-  // Create Image of Dog Breed
-  var div = document.querySelector("#breedImage");
-  var img = document.createElement("img");
-  img.setAttribute("src", "assets/img/breeds/" + (dogBreedArray[i]) + ".jpg");
-  img.setAttribute("alt", (dogBreeds[dogBreedArray[i]].breed));
-  div.appendChild(img);
-}
+
 
 // Checks if a breed is rare and then prints rare or not rare
 function rarityCheck(id, boolean) {
